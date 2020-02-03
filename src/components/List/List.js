@@ -7,7 +7,7 @@ class List extends React.Component {
   static propTypes = {
       title: PropTypes.node.isRequired,
       children: PropTypes.node.isRequired,
-      image: PropTypes.string,
+      imageURL: PropTypes.string,
   }
 
   static defaultProps = {
