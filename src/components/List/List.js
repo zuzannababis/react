@@ -5,14 +5,19 @@ import PropTypes from 'prop-types';
 
 class List extends React.Component {
   static propTypes = {
-      title: PropTypes.node,
-      children: PropTypes.node,
+      title: PropTypes.node.isRequired,
+      children: PropTypes.node.isRequired,
+      image: PropTypes.string,
+  }
+
+  static defaultProps = {
+    children: <p>I can do all the things!!!</p>,
   }
 
   render() {
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} />
+        <Hero titleText={this.props.title} imgSrc={this.props.imageURL} />
         <div className={styles.description}>
           {this.props.children}
         </div>
@@ -20,5 +25,6 @@ class List extends React.Component {
     )
   }
 }
+
 
 export default List;
