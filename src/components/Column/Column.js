@@ -13,7 +13,7 @@ class Column extends React.Component {
 
   static propTypes = {
     title: PropTypes.string.isRequired,
-    cards: PropTypes.node.isRequired,
+    cards: PropTypes.array.isRequired,
     icon: PropTypes.string.isRequired,
   }
 
@@ -21,10 +21,11 @@ class Column extends React.Component {
     const {title, icon, cards}=this.props;
     return (
       <main className={styles.component}>
-        <h3 className={styles.title}>{title}
+        <h3 className={styles.title}>
           <span className={styles.icon}>
             <Icon name={icon}/>
           </span>
+          {title}
         </h3>
         <div>
           {cards.map(cardData => (
