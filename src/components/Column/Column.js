@@ -7,9 +7,6 @@ import {settings} from '../../data/dataStore.js';
 import Icon from '../Icon/Icon.js';
 
 class Column extends React.Component {
-  state = {
-    cards: this.props.cards || [],
-  }
 
   static defaultProps = {
     icon: settings.defaultColumnIcon,
