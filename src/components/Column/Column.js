@@ -34,7 +34,7 @@ class Column extends React.Component {
             <Card key={cardData.id} {...cardData} />
           ))}
         </div>
-        <div className={styles.creator}>
+        <div>
           <Creator text={settings.cardCreatorText} action={addCard} />
         </div>
       </main>
