@@ -6,23 +6,23 @@ import { settings } from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 
 
-const Info = ({title, image, content}) => (
+const FAQ = ({title, image, content}) => (
   <Container>
     <Hero titleText={title} image={image} />
     <p>{ReactHtmlParser(content)}</p>
   </Container>
 );
 
-Info.propTypes = {
+FAQ.propTypes = {
   title: PropTypes.node.isRequired,
   image: PropTypes.string,
   content: PropTypes.node,
 };
 
-Info.defaultProps = {
-  title: settings.info.title,
-  image: settings.info.image,
-  content: settings.info.content,
+FAQ.defaultProps = {
+  title: settings.faq.title,
+  image: settings.faq.image,
+  content: settings.faq.content,
 };
 
-export default Info;
+export default FAQ;
